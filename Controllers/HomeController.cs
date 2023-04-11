@@ -32,17 +32,33 @@ public class HomeController : Controller
     public async Task<IActionResult> Customers()
     {
         HomeCustomersViewModel model = new(
-            Customers: await _db.Customers.ToListAsync()
+            Customers: await _db
+            .Customers.ToListAsync()
         );
         return View(model);
     }
 
-    [ResponseCache(Duration = 10, Location = ResponseCacheLocation.Any)]
     public async Task<IActionResult> CustomerOrders(string? id)
     {
         HomeOrdersByCustomersViewModel model = new(
-            Orders: await _db.Orders.OrderBy(o => o.ShipName).ToListAsync(),
-            OrdersCustomer: await _db.Customers.SingleOrDefaultAsync(c => c.CustomerId == id)
+            Orders: await _db.Orders
+            .OrderBy(o => o.ShipName).ToListAsync(),
+            OrdersCustomer: await _db.Customers
+            .SingleOrDefaultAsync(c => c.CustomerId == id)
+        );
+
+        if (id == null) return NotFound($"Customer with {id} was not found.");
+
+        return View(model);
+    }
+
+    public async Task<IActionResult> OrderDetails(int? id, string? customerId)
+    {
+        HomeOrderDetailViewModel model = new(
+            CustomersOrder: await _db.Orders
+            .SingleOrDefaultAsync(o => o.OrderId == id),
+            OrdersCustomer: await _db.Customers
+            .SingleOrDefaultAsync(c => c.CustomerId == customerId)
         );
 
         if (id == null) return NotFound($"Customer with {id} was not found.");

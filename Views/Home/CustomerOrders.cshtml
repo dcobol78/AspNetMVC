@@ -17,7 +17,8 @@
                     @foreach (Order o in @Model.Orders)
                     {
                         <li>
-                            <a asp-controller="Home" asp-action="OrderDetails" asp-route-id="@o.OrderId">
+                            <a asp-controller="Home" asp-action="OrderDetails" asp-route-id="@o.OrderId"
+                        asp-route-customerId="@o.OrderId">
                                 @o.OrderId @o.ShipName <br /> @o.OrderDate
                             </a>
                         </li>

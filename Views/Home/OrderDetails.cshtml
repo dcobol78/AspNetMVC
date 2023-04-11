@@ -1,0 +1,27 @@
+@using Northwind.DataContext;
+@model HomeOrderDetailViewModel;
+
+@{
+    ViewData["Title"] = "Order detail -" + Model.CustomersOrder.OrderId;
+    Order mod = Model.CustomersOrder;
+}
+<h2> Order Detail</h2>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>Order ID</dt>
+        <dd>@mod.OrderId</dd>
+        <dt>Order Date</dt>
+        <dd>@mod.OrderDate</dd>
+        <dt>Shipped Date</dt>
+        <dd>@mod.ShippedDate</dd>
+        <dt>Ship Name</dt>
+        <dd>@mod.ShipName</dd>
+        <dt>Ship Country</dt>
+        <dd>@mod.ShipCountry</dd>
+        <dt>Ship Region</dt>
+        <dd>@(mod.ShipRegion is null ? "Unknown" : mod.ShipRegion)</dd>
+        <dt>Ship Address</dt>
+        <dd>@mod.ShipAddress</dd>
+    </dl>
+</div>
