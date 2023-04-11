@@ -28,11 +28,24 @@ public class HomeController : Controller
         return View();
     }
 
+    [ResponseCache(Duration = 10, Location = ResponseCacheLocation.Any)]
     public async Task<IActionResult> Customers()
     {
         HomeCustomersViewModel model = new(
             Customers: await _db.Customers.ToListAsync()
         );
+        return View(model);
+    }
+
+    [ResponseCache(Duration = 10, Location = ResponseCacheLocation.Any)]
+    public async Task<IActionResult> CustomerOrders(string? id)
+    {
+        HomeOrdersByCustomersViewModel model = new(
+            Orders: await _db.Orders.OrderBy(o => o.ShipName).ToListAsync(),
+            OrdersCustomer: await _db.Customers.SingleOrDefaultAsync(c => c.CustomerId == id)
+        );
+
+        if (id == null) return NotFound($"Customer with {id} was not found.");
 
         return View(model);
     }

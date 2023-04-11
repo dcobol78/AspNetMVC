@@ -18650,6 +18650,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "h:\\Practice\\AspNetMVC\\AspNetMVC\\Views\\Home\\CustomerOrders.cshtml",
+      "TargetPath": "Views\\Home\\CustomerOrders.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "h:\\Practice\\AspNetMVC\\AspNetMVC\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"

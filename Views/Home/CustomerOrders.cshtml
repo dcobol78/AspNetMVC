@@ -1,0 +1,29 @@
+@using Northwind.DataContext;
+@model HomeOrdersByCustomersViewModel;
+
+@{
+    ViewData["Title"] = $"{Model.OrdersCustomer.CompanyName} Orders";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>@Model.OrdersCustomer.CompanyName Orders</h1>
+
+        @if (Model is not null)
+        {
+            <h2>Orders</h2>
+            <div class="columns-4">
+                <ul>
+                    @foreach (Order o in @Model.Orders)
+                    {
+                        <li>
+                            <a asp-controller="Home" asp-action="OrderDetails" asp-route-id="@o.OrderId">
+                                @o.OrderId @o.ShipName <br /> @o.OrderDate
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</div>
