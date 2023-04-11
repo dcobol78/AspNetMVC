@@ -1,0 +1,36 @@
+@using Northwind.DataContext;
+@model HomeCustomersViewModel;
+
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h1>Northwind Customers</h1>
+
+        @if (Model is not null)
+        {
+            <h3>Query customers by country</h3>
+            <form asp-action="CustomersThatInCountry" method="GET">
+                <input name="country" palceholder="Enter a country name" />
+                <input type="submit" />
+            </form>
+
+            <h2>Products</h2>
+            <div class="columns-2">
+                <ul>
+                    @foreach (Customer c in @Model.Customers)
+                    {
+                        <li>
+                            <a asp-controller="Home" asp-action="CustomerOrders" asp-route-id="@c.CustomerId">
+                                @c.CompanyName located in @(c.Country is null ? "Unknown" : c.Country) @(c.City is null ?
+                        "Unknown" : c.City)
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    </div>
+</div>

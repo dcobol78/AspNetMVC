@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AspNetMVC.Data.Northwind.EntityModels;
+namespace Northwind.DataContext;
 
 public partial class ProductSalesFor1997
 {
