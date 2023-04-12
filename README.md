@@ -1,3 +1,13 @@
 # AspNetMVC
-Simple MVC project on C#. 
-Used Northwind database from microsoft with MS SQL Server, Entity Framework and LINQ.
+In this project, I utilized ASP.NET Core, LINQ, C#, and MS SQL Server to create a robust and efficient
+        application.</p>
+    <p>ASP.NET Core allowed me to build a scalable web application with ease, while LINQ provided a simple and intuitive
+        way to interact with the database. Using C# as the programming language allowed me to write clean and
+        maintainable code. Lastly, MS SQL Server provided a reliable and secure database solution for storing and
+        retrieving data.</p>
+    <p>In addition to the technologies mentioned above, I also utilized the Model-View-Controller (MVC) design pattern
+        in this project. MVC helped me to separate the application's concerns and improve its maintainability. The model
+        represents the data and business logic, the view displays the user interface, and the controller handles user
+        input and updates the model and view accordingly. This pattern allowed me to create a well-structured and
+        organized application that was easy to modify and extend.</p>
+    <p>Overall, these technologies worked seamlessly together to create a powerful application.</p>
