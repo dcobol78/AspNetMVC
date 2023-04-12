@@ -1,13 +1,32 @@
-# AspNetMVC
-In this project, I utilized ASP.NET Core, LINQ, C#, and MS SQL Server to create a robust and efficient
-        application.</p>
-    <p>ASP.NET Core allowed me to build a scalable web application with ease, while LINQ provided a simple and intuitive
-        way to interact with the database. Using C# as the programming language allowed me to write clean and
-        maintainable code. Lastly, MS SQL Server provided a reliable and secure database solution for storing and
-        retrieving data.</p>
-    <p>In addition to the technologies mentioned above, I also utilized the Model-View-Controller (MVC) design pattern
-        in this project. MVC helped me to separate the application's concerns and improve its maintainability. The model
-        represents the data and business logic, the view displays the user interface, and the controller handles user
-        input and updates the model and view accordingly. This pattern allowed me to create a well-structured and
-        organized application that was easy to modify and extend.</p>
-    <p>Overall, these technologies worked seamlessly together to create a powerful application.</p>
+# AspNetMvc
+
+This project is a web application built using the Model-View-Controller (MVC) pattern. The application is built using ASP.NET CORE, LINQ, C#, and MS SQL SERVER technologies.
+
+## Features
+
+- Uses the MVC pattern for efficient development and maintenance
+- Provides a simple interface for easy navigation
+- Allows users to perform CRUD operations on data
+- Uses LINQ to query and manipulate data
+- Uses MS SQL SERVER for efficient data storage and retrieval
+
+## Getting Started
+
+To use the web application, simply open the website and start navigating through the different pages. Users can perform CRUD operations on data by clicking on the appropriate buttons and filling out the necessary forms.
+
+## Technologies Used
+
+This project was built using the following technologies:
+
+- ASP.NET CORE
+- LINQ
+- C#
+- MS SQL SERVER
+
+## Contributing
+
+If you would like to contribute to this project, please fork the repository and submit a pull request. We welcome contributions from anyone who is interested in improving the web application.
+
+## Contact
+
+If you have any questions or comments about this project, please contact me at dcobol78@yandex.ru
