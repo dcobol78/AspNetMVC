@@ -11,14 +11,8 @@
 
         @if (Model is not null)
         {
-            <h3>Query customers by country</h3>
-            <form asp-action="CustomersThatInCountry" method="GET">
-                <input name="country" placeholder="Enter a country name" />
-                <input type="submit" value="Submit">
-            </form>
-
             <h2>Customers</h2>
-            <div class="columns-2">
+            <div class="column">
                 <ul>
                     @foreach (Customer c in @Model.Customers)
                     {

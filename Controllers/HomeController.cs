@@ -66,6 +66,16 @@ public class HomeController : Controller
         return View(model);
     }
 
+    public async Task<IActionResult> CustomersThatInCountry(string? country)
+    {
+        HomeCustomersViewModel model = new(
+            Customers: await _db
+            .Customers.Where(c => c.Country == country)
+            .ToListAsync()
+        );
+        return View(model);
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

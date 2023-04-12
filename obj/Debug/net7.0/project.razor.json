@@ -18655,6 +18655,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "h:\\Practice\\AspNetMVC\\AspNetMVC\\Views\\Home\\CustomersThatInCountry.cshtml",
+      "TargetPath": "Views\\Home\\CustomersThatInCountry.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "h:\\Practice\\AspNetMVC\\AspNetMVC\\Views\\Home\\CustomerOrders.cshtml",
       "TargetPath": "Views\\Home\\CustomerOrders.cshtml",
       "FileKind": "mvc"
